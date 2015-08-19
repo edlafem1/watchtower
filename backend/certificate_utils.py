@@ -50,7 +50,7 @@ def verify_request(self, request, client_address):
     global user_certificate
     from datetime import datetime
     date_time = str(datetime.utcnow()).split(" ")
-    log_file = open("logs/" + date_time[0]+".log", 'a')
+    log_file = open(configuration.log_folder + "/" + date_time[0]+".log", 'a')
     log_file.write("[" + ' '.join(date_time) + "] " + str(request.getpeername()) + " ")
     # request is of type ssl.SSLSocket
     cert = request.getpeercert(False)  # False makes this function return a dict, True returns in binary

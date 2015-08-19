@@ -5,7 +5,7 @@ import certificate_utils
 import werkzeug.serving
 werkzeug.serving.BaseWSGIServer.verify_request = certificate_utils.verify_request
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder=configuration.template_folder)
 
 
 @app.route("/")
