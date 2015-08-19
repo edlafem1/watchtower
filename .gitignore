@@ -1,0 +1,8 @@
+*.pyc
+logs/*
+*.log
+configuration.py
+cyber.db
+certs/*
+*.pem
+.idea/*
